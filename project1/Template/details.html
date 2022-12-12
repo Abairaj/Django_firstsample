@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%block title%}Details{%endblock%}
+
+{%block content%}
+<h1 class="text-center my-3 text-primary">Details</h1>
+<hr>
+
+
+<div class="container my-5">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {%for d in det%}
+      <div class="col p-3">
+        <div class="card shadow-sm">
+          <img src="{{d.image.url}}" alt="">
+          <div class="card-body">
+            <p class="card-title"><h3>{{d.title}}</h3></p>
+            <p class="card-text">{{d.description}}</p>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </div>
+  </div>
+{%endblock%}

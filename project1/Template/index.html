@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block content%}
+<h1 class="text-center my-3">Home</h1>
+<hr>
+
+<div class="container">
+    {%for d in doc%}
+    <div class="p-3">
+        <h3 class="text-success">{{d.title}}</h3>
+        <p>{{d.description}}</p>
+    </div>
+    {%endfor%}
+</div>
+{%endblock%}
